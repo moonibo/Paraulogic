@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Paraula</title>
+  <!-- Font Awesonme -->
+  <script src="https://kit.fontawesome.com/b614cfd257.js" crossorigin="anonymous"></script>
+  <!-- CSS de l'EAC -->
+  <link rel="stylesheet" type="text/css" href="css/paraula.css">
+
+  <!-- JS de l'EAC -->
+  <script type="text/javascript" src="js/paraula.js"></script>
+</head>
+<body>
+  <div id="game">
+    <header>
+      <div class="title">    
+        <div>PARAULOGIC</div> 
+      </div>
+      <div class="menu">
+       <button id="statistics-button" class="icon" aria-label="statistics">
+          <i class="fa-solid fa-square-poll-vertical"></i>
+        </button>
+      </div>   
+    </header>
+    
+    <div id="board-container">
+      <div id="board">
+        <div class="row" estat="pendent" correctes="0" incorrectes="0">
+          <div class="tile"></div>
+          <div class="tile"></div>
+          <div class="tile"></div>
+          <div class="tile"></div>
+          <div class="tile"></div>
+        </div>
+      </div>     
+    </div>
+    <div id="keyboard">
+      <div class="row">
+        <button data-key="q">q</button>
+        <button data-key="w">w</button>
+        <button data-key="e">e</button>
+        <button data-key="r">r</button>
+        <button data-key="t">t</button>
+        <button data-key="y">y</button>
+        <button data-key="u">u</button>
+        <button data-key="i">i</button>
+        <button data-key="o">o</button>
+        <button data-key="p">p</button>
+      </div>
+      <div class="row">
+        <button data-key="a">a</button>
+        <button data-key="s">s</button>
+        <button data-key="d">d</button>
+        <button data-key="f">f</button>
+        <button data-key="g">g</button>
+        <button data-key="h">h</button>
+        <button data-key="j">j</button>
+        <button data-key="k">k</button>
+        <button data-key="l">l</button>
+        <button data-key="ç">ç</button>
+      </div>
+      <div class="row">
+        <button data-key="↵" class="one-and-a-half">enter</button>
+        <button data-key="z">z</button>
+        <button data-key="x">x</button>
+        <button data-key="c">c</button>
+        <button data-key="v">v</button>
+        <button data-key="b">b</button>
+        <button data-key="n">n</button>
+        <button data-key="m">m</button>
+        <button data-key="←" class="one-and-a-half"><i class="fa-solid fa-delete-left"></i></button>
+      </div>
+    </div>
+    <div class="overlay">
+      <div class="content">
+        <slot>
+          <div class="container">
+          <h1>Estadístiques</h1>
+          <div class="close-icon">
+                  <i class="fa-solid fa-xmark"></i>
+                </div>
+              <div id="statistics">
+            <div class="statistic-container">
+              <div class="statistic">0</div>
+              <div class="label">Jugades</div>
+            </div>
+
+            <div class="statistic-container">
+              <div class="statistic">0</div>
+              <div class="label">Èxits (%)</div>
+            </div>
+
+            <div class="statistic-container">
+              <div class="statistic">0</div>
+              <div class="label">Errors (%)</div>
+            </div>
+          </div>
+        </div>
+        </slot>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
+
